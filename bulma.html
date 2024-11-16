@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet"><!-- CDN för Bulma -->
     <link rel="stylesheet" href="/bulma.css">
     <script defer src="bulma.js"></script>
     <title>CSS Ramverk</title>
 </head>
 
-<body>
+<body class="p-3">
     <header>
         <section class="hero">
             <img src="/images/plants.jpg" alt="plants"
@@ -21,9 +21,7 @@
 
         <nav class="navbar title is-5" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-
-
-                <!-- Mobilmeny-knapp -->
+                <!-- Burgermeny mobil -->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -31,9 +29,10 @@
                 </a>
             </div>
 
-            <div id="navbarMenu" class="navbar-menu">
+            <!-- Navigering -->
+            <div id="navbarMenu" class="navbar-menu mr-4">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="index.html">Hem</a>
+                    <a class="navbar-item" href="index.html">Startsidan</a>
 
                     <!-- Dropdown-meny -->
                     <div class="navbar-item has-dropdown is-hoverable">
@@ -51,12 +50,15 @@
     </header>
 
     <main class="p-5">
+
         <h1 class="title is-2">Ramverk 2 - Bulma</h1>
+
         <div class="block">
             Bulma är ett modernt CSS-ramverk baserat på Flexbox, vilket gör det enkelt att skapa responsiva och stilrena
             webbplatser.
             Ramverket är modulärt och har en rad färdiga komponenter och klasser som underlättar webbutveckling utan att
-            behöva skriva mycket egen CSS.
+            behöva skriva mycket egen CSS.<br>
+            Besök <a href="https://bulma.io/">Bulma</a> för mer information.
         </div>
 
         <div class="columns">
@@ -86,6 +88,7 @@
             </div>
         </div>
 
+        <!-- Formuläret -->
         <div class="container" id="userFormBulma">
             <h2 class="title is-4 pt-6">Formulär</h2>
             <div class="field">
@@ -126,6 +129,7 @@
             </div>
         </div>
 
+        <!-- Tabellen -->
         <div class="container" id="userTableBulma">
             <h2 class="title is-4 pt-6">Tabell</h2>
             <table class=" table is-striped is-hoverable is-fullwidth is-responsive">
