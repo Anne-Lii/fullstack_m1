@@ -19,7 +19,7 @@
                 style="max-height: 400px;width: 100%; object-fit: cover; object-position: center;">
         </section>
 
-        <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <nav class="navbar title is-5" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
 
 
@@ -32,10 +32,18 @@
             </div>
 
             <div id="navbarMenu" class="navbar-menu">
-                <div class="navbar-start">
+                <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Hem</a>
-                    <a class="navbar-item" href="bootstrap.html">Bootstrap</a>
-                    <a class="navbar-item" href="bulma.html">Bulma</a>
+
+                    <!-- Dropdown-meny -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Ramverk</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="bootstrap.html">Bootstrap</a>
+                            <a class="navbar-item" href="bulma.html">Bulma</a>
+                        </div>
+                    </div>
+
                     <a class="navbar-item" href="publish.html">Publicering</a>
                 </div>
             </div>
@@ -177,4 +185,5 @@
         </div>
     </main>
 </body>
+
 </html>
