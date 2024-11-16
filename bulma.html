@@ -7,11 +7,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bulma.css">
+    <script defer src="bulma.js"></script>
     <title>CSS Ramverk</title>
 </head>
 
 <body>
     <header>
+        <section class="hero">
+            <img src="/images/plants.jpg" alt="plants"
+                style="max-height: 400px;width: 100%; object-fit: cover; object-position: center;">
+        </section>
+
         <nav class="navbar is-success" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
 
@@ -34,10 +41,45 @@
             </div>
         </nav>
     </header>
+
     <main class="p-5">
-        <h1>Detta är Bulmasidan</h1>
+        <h1 class="title is-2">Ramverk 2 - Bulma</h1>
+        <div class="block">
+            Bulma är ett modernt CSS-ramverk baserat på Flexbox, vilket gör det enkelt att skapa responsiva och stilrena
+            webbplatser.
+            Ramverket är modulärt och har en rad färdiga komponenter och klasser som underlättar webbutveckling utan att
+            behöva skriva mycket egen CSS.
+        </div>
+
+        <div class="columns">
+            <!-- Kolumn för fördelar -->
+            <div class="column is-half">
+                <div class="box has-background-success-light">
+                    <h2 class="title is-4">+ Fördelar</h2>
+                    <ul class="ml-4">
+                        <li>Flexbox-baserat, enkelt att skapa responsiva layouter.</li>
+                        <li>Lätt att använda, med tydlig dokumentation.</li>
+                        <li>Modulärt,man behöver bara ladda de delar som behövs.</li>
+                        <li>Mycket tutorials online.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Kolumn för nackdelar -->
+            <div class="column is-half">
+                <div class="box has-background-danger-light">
+                    <h2 class="title is-4">- Nackdelar</h2>
+                    <ul class="ml-4">
+                        <li>Saknar inbyggda JavaScript-komponenter.</li>
+                        <li>Kan behövas egen CSS för avancerade anpassningar.</li>
+                        <li>Fokuset på flexbox kan vara jobbigt om man föredrar Grid.</li>
+                        <li>Funktionaliteten är lite begränsad jämfört med vissa andra ramverk.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="container" id="userFormBulma">
-            <h2>Formulär</h2>
+            <h2 class="title is-4 pt-6">Formulär</h2>
             <div class="field">
                 <label for="name" class="label">Namn</label>
                 <div class="control">
@@ -53,35 +95,32 @@
             <div class="field">
                 <label class="label">Har du katt?</label>
                 <div class="control">
-                  <div class="select">
-                    <select>
-                      <option>Ja</option>
-                      <option>Nej</option>
-                    </select>
-                  </div>
+                    <div class="select">
+                        <select>
+                            <option>Ja</option>
+                            <option>Nej</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="field">
                 <div class="control">
-                  <label class="checkbox" for="license">
-                    <input type="checkbox" id="license">
-                    Har du B-körkort?
-                  </label>
+                    <label class="checkbox" for="license">
+                        <input type="checkbox" id="license">
+                        Har du B-körkort?
+                    </label>
                 </div>
             </div>
             <div class="field is-grouped">
                 <div class="control">
-                  <button class="button is-link">Skicka</button>
+                    <button class="button is-link">Skicka</button>
                 </div>
-                <div class="control">
-                  <button class="button is-link is-light">Rensa</button>
-                </div>
-              </div>
+            </div>
         </div>
 
         <div class="container" id="userTableBulma">
-            <h2>Tabell</h2>
-            <table class=" table is-striped is-hoverable is-fullwidth">
+            <h2 class="title is-4 pt-6">Tabell</h2>
+            <table class=" table is-striped is-hoverable is-fullwidth is-responsive">
                 <thead>
                     <th>#</th>
                     <th>Namn</th>
@@ -136,12 +175,6 @@
                 </tfoot>
             </table>
         </div>
-
     </main>
-    <footer>
-
-    </footer>
-    <script src="bulma.js"></script>
 </body>
-
 </html>
