@@ -1,19 +1,21 @@
 <!-- Kod skriven av Anne-Lii Hansen
  En webbplats där en undersida är skapad med CSS ramverket Bootstrap och en undersida är skapad med CSS ramverket Bulma samt en undersida med info om publiceringen -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
-     <title>CSS Ramverk</title>
- </head>
- <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <title>CSS Ramverk</title>
+</head>
+
+<body>
     <header>
         <nav class="navbar is-success" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-             
-        
+
+
                 <!-- Mobilmeny-knapp -->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                     <span aria-hidden="true"></span>
@@ -21,7 +23,7 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-        
+
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item" href="index.html">Hem</a>
@@ -32,16 +34,114 @@
             </div>
         </nav>
     </header>
-     <main>
+    <main class="p-5">
         <h1>Detta är Bulmasidan</h1>
+        <div class="container" id="userFormBulma">
+            <h2>Formulär</h2>
+            <div class="field">
+                <label for="name" class="label">Namn</label>
+                <div class="control">
+                    <input type="text" class="input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="position">Yrke</label>
+                <div class="control">
+                    <textarea class="textarea" id="position"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Har du katt?</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Ja</option>
+                      <option>Nej</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                  <label class="checkbox" for="license">
+                    <input type="checkbox" id="license">
+                    Har du B-körkort?
+                  </label>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Skicka</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Rensa</button>
+                </div>
+              </div>
+        </div>
 
-     </main>
-     <footer>
+        <div class="container" id="userTableBulma">
+            <h2>Tabell</h2>
+            <table class=" table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <th>#</th>
+                    <th>Namn</th>
+                    <th>Yrke</th>
+                    <th>Har katt?</th>
+                    <th>Har B-körkort?</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anne-Lii</td>
+                        <td>Webbutvecklare</td>
+                        <td>Nej</td>
+                        <td>Ja</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Kim</td>
+                        <td>HR-chef</td>
+                        <td>Nej</td>
+                        <td>Ja</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ida</td>
+                        <td>Jurist</td>
+                        <td>Nej</td>
+                        <td>Nej</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Kent</td>
+                        <td>Administratör</td>
+                        <td>Ja</td>
+                        <td>Nej</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Bengt</td>
+                        <td>Kock</td>
+                        <td>Ja</td>
+                        <td>Ja</td>
+                    </tr>
 
-     </footer>
-     <script src="bulma.js"></script>
- </body>
+                </tbody>
+                <tfoot>
+                    <th>#</th>
+                    <th>Namn</th>
+                    <th>Yrke</th>
+                    <th>Har katt?</th>
+                    <th>Har B-körkort?</th>
+                </tfoot>
+            </table>
+        </div>
 
- </html>
- 
- 
+    </main>
+    <footer>
+
+    </footer>
+    <script src="bulma.js"></script>
+</body>
+
+</html>

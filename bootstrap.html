@@ -1,91 +1,103 @@
 <!-- Kod skriven av Anne-Lii Hansen
- En webbplats där en undersida är skapad med CSS ramverket Bootstrap och en undersida är skapad med CSS ramverket Bulma samt en undersida med info om publiceringen -->
- <!DOCTYPE html>
+ En webbplats om CSS ramverk. två undersidor med två olika ramverk samt en sida för publisering -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN för bootstrap CSS ramverk -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- CDN för bootstrap CSS ramverk -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
-
-    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script defer="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-    <script defer src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
-    <script defer src="bootstrap.js"></script>
-
-    <title>CSS Ramverk</title>
+    <script defer src="script.js"></script>
+    </script>
+        <title>CSS Ramverk</title>
 </head>
 
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <header>
-        <nav class="navbar navbar-expand-lg bg-pink">
-            <div class="container-fluid">
+        <!-- Bakgrundsbild header -->
+       <picture>
+           <img src="images/plants.jpg" alt="Växter" class="img-fluid" style="max-height: 400px; width: 100%; object-fit: cover;">
+       </picture>
 
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Startsidan</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Ramverk
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="bootstrap.html">Bootstrap</a></li>
-                                <li><a class="dropdown-item" href="bulma.html">Bulma</a></li>
-                        </li>
-                    </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="publish.html">Publisering</a>
-                    </li>
-                    </ul>
+       <nav class="navbar navbar-expand-lg">
+           <div class="container-fluid">
+               <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                       <li class="nav-item">
+                           <a class="nav-link active fs-5 text-black" aria-current="page" href="index.html">Startsidan</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                               Ramverk
+                           </a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-black" href="bootstrap.html">Bootstrap</a></li>
+                            <li><a class="dropdown-item text-black" href="bulma.html">Bulma</a></li>
+                       </li>
+                   </ul>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link active fs-5 text-black" aria-current="page" href="publish.html">Publisering</a>
+                   </li>
+                   </ul>
 
-                </div>
-            </div>
-        </nav>
-    </header>
+               </div>
+           </div>
+       </nav>
+   </header>
+
     <main>
         <div class="container text-left">
             <div class="row">
-                <div class="col" >
-                    <h1>Ramverk 1 - Bootstrap</h1>
+                <div class="col p-10">
+                    <h1 class="mt-5">Ramverk 1 - Bootstrap</h1>
                     <p>
-                        Bootstrap är ett populärt CSS-ramverk som hjälper utvecklare att snabbt och enkelt skapa responsiva och moderna webbplatser. 
-                        Bootstrap har ett omfattande bibliotek av färdiga komponenter som knappar, tabeller, formulär och navigering med mera.
-                        Besök <a href="https://getbootstrap.com/" target="_blank">Bootstraps officiella webbplats</a> för mer information.
+                        Bootstrap är ett populärt CSS-ramverk som hjälper utvecklare att snabbt och enkelt skapa
+                        responsiva och moderna webbplatser.
+                        Bootstrap har ett omfattande bibliotek av färdiga komponenter som knappar, tabeller, formulär
+                        och navigering med mera.<br>
+                        Besök <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> för mer information.
                     </p>
-            
-                    <h2>Fördelar med Bootstrap</h2>
-                    <ul>
-                        <li>Sparar tid med färdiga komponenter.</li>
-                        <li>Responsivt grid-funktion som anpassar din layout till olika skärmstorlekar.</li>
-                        <li>Tillgång till mycket dokumentation.</li>
-                        <li>Det är gratis.</li>
-                        <li>Finns även mycket tutorials om Bootstrap på youtube.</li>
-                    </ul>
-            
-                    <h2>Nackdelar med Bootstrap</h2>
-                    <ul>
-                        <li>Bootstrap sidor liknar varandra lite och har ett Bootstrapigt utseende.</li>
-                        <li>Om man vill anpassa vissa grejer så behöver man skriva egen css kod för att skriva över standardinställningarna.</li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-success-subtle text-info-emphasis " style="max-width: 100%;">
+                                <h2 class=" p-2">+ Fördelar med Bootstrap</h2>
+                                <ul>
+                                    <li>Sparar tid med färdiga komponenter.</li>
+                                    <li>Responsivt grid-funktion som anpassar din layout till olika skärmstorlekar.</li>
+                                    <li>Tillgång till mycket dokumentation.</li>
+                                    <li>Det är gratis.</li>
+                                    <li>Finns även mycket tutorials om Bootstrap på youtube.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-danger-subtle text-info-emphasis" style="max-width: 100%;">
+                                <h2 class="p-2">- Nackdelar med Bootstrap</h2>
+                                <ul>
+                                    <li>Bootstrap sidor liknar varandra lite och har ett "Bootstrapigt utseende".</li>
+                                    <li>Om man vill anpassa vissa grejer så behöver man skriva egen css kod för att
+                                        skriva över standardinställningarna.</li>
+                                    <li>Tar väldigt lång tid att leta reda på dokumentation om varje sak jag vill göra.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <h2>Formulär</h2>
-                    <form id="userForm" style="width:100%">
+            <div class="row ">
+                <div class="container">
+                    <h2 class="mt-5">Formulär</h2>
+                    <form id="userForm" style="width:100%" onsubmit="addRow(event)"><!-- klickevent för submit -->
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Namn:</label>
@@ -103,91 +115,75 @@
                         </select>
                         <br>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="check" >
+                            <input type="checkbox" class="form-check-input" id="check">
                             <label class="form-check-label" for="check">Checka i om du har B-körkort</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Skicka in</button>
+                       <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success fs-4" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);">Skicka in</button>
+                       </div>
 
                     </form>
                 </div>
 
-                <div class="col-12 col-md-8 ">
-                    
-                    <h2>Tabell</h2>
+                <div class=" container">
 
-                    <table id="infotable" class="table table-striped" style="width:98%">
+                    <h2 class="mt-5">Tabell</h2>
+
+                    <table class="table">
                         <thead>
-                            <tr>
-                                <th>Namn</th>
-                                <th>Yrke</th>
-                                <th>Har katt</th>
-                                <th>Har B-körkort</th>
-                                
-                            </tr>
+                          <tr>
+                            <th  class="table-danger" scope="col">#</th>
+                            <th  class="table-danger" scope="col">Namn</th>
+                            <th  class="table-danger" scope="col">Yrke</th>
+                            <th  class="table-danger" scope="col">Har katt?</th>
+                            <th  class="table-danger" scope="col">Har B-körkort</th>
+                          </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Anne-Lii</td>
-                                <td>Webbutvecklare</td>
-                                <td>Ja</td>
-                                <td>Ja</td>
-                               
-                            </tr>
-                            <tr>
-                                <td>Jens</td>
-                                <td>Webbutvecklare</td>
-                                <td>Nej</td>
-                                <td>Ja</td>
-                                
-                            </tr>
-                            <tr>
-                                <td>Anna</td>
-                                <td>Systemutvecklare</td>
-                                <td>Ja</td>
-                                <td>Ja</td>
-                               
-                            </tr>
-                            <tr>
-                                <td>Kevin</td>
-                                <td>Fullstack</td>
-                                <td>Ja</td>
-                                <td>Ja</td>
-                              
-                            </tr>
-                            <tr>
-                                <td>Astrid</td>
-                                <td>IT-Säkerhetsspecialist</td>
-                                <td>Ja</td>
-                                <td>Ja</td>
-                               
-                            </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Anne-Lii</td>
+                            <td>Webbutvecklare</td>
+                            <td>Nej</td>
+                            <td>Ja</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Lisa</td>
+                            <td>Frisör</td>
+                            <td>Ja</td>
+                            <td>Nej</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Sara</td>
+                            <td>HR-chef</td>
+                            <td>Ja</td>
+                            <td>Ja</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Jennie</td>
+                            <td>Jurist</td>
+                            <td>Ja</td>
+                            <td>Nej</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Therese</td>
+                            <td>Förskolepedagog</td>
+                            <td>Nej</td>
+                            <td>Ja</td>
+                          </tr>
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Namn</th>
-                                <th>Yrke</th>
-                                <th>Har katt</th>
-                                <th>Har B-körkort</th>
-                              
-                            </tr>
-                        </tfoot>
-
-                    </table>
+                      </table>
 
 
                 </div>
             </div>
-
     </main>
-    <footer>
-
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

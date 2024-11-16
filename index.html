@@ -1,59 +1,95 @@
-<!-- Kod skriven av Anne-Lii Hansen
- En webbplats där en undersida är skapad med CSS ramverket Bootstrap och en undersida är skapad med CSS ramverket Bulma samt en undersida med info om publiceringen -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-    <title>Bootstrap Example</title>
-   
-</head>
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Startsidan</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Ramverk
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="bootstrap.html">Bootstrap</a></li>
-                            <li><a class="dropdown-item" href="bulma.html">Bulma</a></li>
-                    </li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="publish.html">Publisering</a>
-                </li>
-                </ul>
+<html lang="sv">
 
-            </div>
-        </div>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgiftsinformation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    
+    <header>
+        <!-- Bakgrundsbild header -->
+       <picture>
+           <img src="images/plants.jpg" alt="Växter" class="img-fluid" style="max-height: 400px; width: 100%; object-fit: cover;">
+       </picture>
+
+       <nav class="navbar navbar-expand-lg">
+           <div class="container-fluid">
+               <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                       <li class="nav-item">
+                           <a class="nav-link active fs-5 text-black" aria-current="page" href="index.html">Startsidan</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                               Ramverk
+                           </a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-black" href="bootstrap.html">Bootstrap</a></li>
+                            <li><a class="dropdown-item text-black" href="bulma.html">Bulma</a></li>
+                       </li>
+                   </ul>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link active fs-5 text-black" aria-current="page" href="publish.html">Publisering</a>
+                   </li>
+                   </ul>
+
+               </div>
+           </div>
+       </nav>
    </header>
 
-   <main>
-<h1>Detta är startsidan</h1>
-   </main>
+    <!-- Informationskort om ramverken -->
+    <section class="container">
+        <section class="mx-auto" style="max-width: 1100px;">
+            <p class="p-3">
+                Moment 1 i denna kurs går ut på att testa på olika CSS-ramverk för att skapa en webbplats. 
+                Det bästa sättet att lära sig är att att faktistk göra det. 
+                På denna webbplats ska två undersidor skapas med två olika CSS-ramverk. 
+                På varje undersida ska det finnas information om ramverket i fråga tillsammans med för- och nackdelar. 
+                Det ska även finnas ett formulär där fyra olika data ska fyllas i och läggas till en tabell där det från början ska finnas minst 5 rader med data.
+                Nedan finns information om de två CSS-ramverk som jag har valt att jobba med.
+            </p>
+        </section>
+        <div class="row justify-content-center">
+            <!-- Kort för första ramverket -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bootstrap display-1 text-primary"></i>
+                        <h3 class="card-title mt-3">Bootstrap</h3>
+                        <p class="card-text">Bootstrap är ett omfattande ramverk för att snabbt skapa responsiva och stilrena webbplatser. Det erbjuder ett stort urval av olika komponenter.</p>
+                        <a href="bootstrap.html" class="btn btn-success">Läs mer om Bootstrap</a>
+                    </div>
+                </div>
+            </div>
 
-   <footer>
+            <!-- Kort för andra ramverket -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <i class="bi bi-columns-gap display-1 text-success"></i>
+                        <h3 class="card-title mt-3">Bulma</h3>
+                        <p class="card-text">Bulma är ett CSS-ramverk med fokus på flexibilitet och enkelhet. Det är snabbt och enkelt att anpassa och passar perfekt för minimalistiska designer.</p>
+                        <a href="bulma.html" class="btn btn-success">Läs mer om Bulma</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   </footer>
-
+    <!-- Länka till Bootstrap-ikoner för att lägga till ikoner -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
